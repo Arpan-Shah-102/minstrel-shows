@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #2A1E5C; /* rich violet */
+    color: #E8E9F3; /* soft lavender */
+}
+
+nav {
+    position: sticky;
+    padding: 20px;
+    background-color: #0F1020; /* deep indigo */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 4px solid #B91372; /* vibrant pink */
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 4px 16px rgb(0, 0, 0);
+    
+    & > a, & > ul a {
+        cursor: pointer;
+        color: #F7C59F; /* warm peach */
+        transition: color 0.3s ease;
+        text-decoration: none;
+        text-shadow: 0 0 5px #F7C59F; /* subtle glow */
+
+        &:hover {
+            color: #ffe4d0; /* warm peach */
+        }
+        &:active {
+            color: #ffb380; /* warm peach */
+            opacity: 0.75;
+        }
+    }
+    & > ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+}
+header {
+    text-align: center;
+    /* background: linear-gradient(135deg, #6A0572, #B91372); */
+    background: url('./assets/wooden-stage.jpg') no-repeat bottom center/cover; /* replace with actual image path */
+    color: #F7C59F; /* warm peach */
+    text-shadow: 0 0 10px #F7C59F; 
+    border-bottom: 4px solid #B91372; /* vibrant pink */
+    
+    & .theater-image {
+        background: url('./assets/theater-curtain.png') no-repeat top center/cover; /* replace with actual image path */
+        filter: drop-shadow(0px -8px 8px black);
+        padding: 240px 20px;
+    }
+    & h1 {font-size: 3rem};/* subtle glow */
+    & h3 {font-size: 1.5rem; margin-top: 10px; font-style: italic; color: #ffe4d0;} /* warm peach */
+}
+main {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    & .topic {
+        background-color: #3B1F5B; /* darker violet */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+        & h2 {
+            color: #F7C59F; /* warm peach */
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #F7C59F; /* subtle glow */
+        }
+        & h4 {
+            line-height: 1.6;
+            color: #E8E9F3; /* soft lavender */
+        }
+        & hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 2px solid #B91372; /* vibrant pink */
+        }
+        & .topic-content .left-bar {
+            margin: 20px 0px;
+            padding-left: 20px;
+            border-left: 4px solid #B91372; /* vibrant pink */
+        }
+        & .topic-content ul li {
+            margin-bottom: 10px;
+            margin-left: 10px;
+            color: #E8E9F3; /* soft lavender */
+            line-height: 1.6;
+        }
+        & .source a {
+            text-shadow: 0 0 5px #F7C59F; /* subtle glow */
+            margin: 8px 0 0 20px;
+            color: #F7C59F; /* warm peach */
+            text-decoration: underline wavy #E8E9F3;
+            transition: color 0.3s ease;
+            display: inline-block;
+
+            &:hover {
+                color: #ffe4d0; /* warm peach */
+            }
+            &:active {
+                color: #ffb380; /* warm peach */
+                opacity: 0.75;
+            }
+        }
+    }
+    & .images {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+
+        & .image-container {
+            background-color: #3B1F5B; /* darker violet */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            height: 300px;
+            width: 50%;
+            text-align: center;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 10px;
+                transition: transform 0.3s ease;
+                border: 2px solid black;
+
+
+                &:hover {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0F1020; /* deep indigo */
+    color: #E8E9F3; /* soft lavender */
+    border-top: 4px solid #B91372; /* vibrant pink */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    & div.left-side {
+        text-align: left;
+        & a {
+            color: #F7C59F; /* warm peach */
+            text-shadow: 0 0 5px #F7C59F; /* subtle glow */
+            text-decoration: underline dotted #E8E9F3;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #ffe4d0; /* warm peach */
+            }
+            &:active {
+                color: #ffb380; /* warm peach */
+                opacity: 0.75;
+            }
+        }
+    }
+    & div.credits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 500px;
+        width: 100%;
+        
+        & p {
+            margin: 0;
+            color: #F7C59F; /* warm peach */
+            text-shadow: 0 0 5px #F7C59F; /* subtle glow */
+            padding: 5px;
+            
+            &.bg {
+                background-color: #B91372; /* vibrant pink */
+                border-radius: 8px;
+            }
+        }
+    }
+}
