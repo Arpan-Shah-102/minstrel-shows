@@ -98,11 +98,11 @@ main {
             color: #E8E9F3; /* soft lavender */
             line-height: 1.6;
         }
-        & .source a {
+        & .source {
             text-shadow: 0 0 5px #F7C59F; /* subtle glow */
             margin: 8px 0 0 20px;
             color: #F7C59F; /* warm peach */
-            text-decoration: underline wavy #E8E9F3;
+            text-decoration: underline dashed #E8E9F3;
             transition: color 0.3s ease;
             display: inline-block;
 
