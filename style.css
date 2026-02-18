@@ -10,6 +10,7 @@ html {
 body {
     background-color: #2A1E5C; /* rich violet */
     color: #E8E9F3; /* soft lavender */
+    overflow-x: hidden;
 }
 
 nav {
@@ -143,7 +144,9 @@ main {
                 transition: transform 0.3s ease;
                 border: 2px solid black;
 
-
+                &.top {
+                    object-position: top;
+                }
                 &:hover {
                     transform: scale(1.5);
                 }
